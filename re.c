@@ -31,7 +31,7 @@ void re_compile(regex_t *preg, const char *regex, int cflags,
 	regerror(i, preg, p, l);
 	FATAL("on '%s' - %s", regex, p);
     }
-    DEBUG_E(1, " %d sub expression(s)", preg->re_nsub);
+    DEBUG_E(1, " %lu sub expression(s)", preg->re_nsub);
     /* [0] is entire match, [1] is first substring */
     *pmatch = malloc((preg->re_nsub+1)*sizeof(**pmatch));
     if (!*pmatch)

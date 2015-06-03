@@ -108,7 +108,7 @@ all: $(PROGS)
 $(OBJECTS): $(DEFS)
 
 $(PROGS): %: %.o $(DEFS) $(OBJECTS)
-	$(CC) $(OBJECTS) $(CFLAGS) $(LDFLAGS) $(STATIC) -lbfd -liberty $(DYNAMIC) -o $@
+	$(CC) $(OBJECTS) $(CFLAGS) $(LDFLAGS) $(STATIC) -lbfd -liberty $(DYNAMIC) -ldl -lz -o $@
 	-@size $@
 
 clean:

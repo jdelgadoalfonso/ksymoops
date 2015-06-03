@@ -5,6 +5,8 @@
 	Released under the GNU Public Licence, Version 2.
 
 */
+#define PACKAGE "ksymoops"
+#define PACKAGE_VERSION "2.4.11"
 
 #include <bfd.h>
 #include <sys/types.h>

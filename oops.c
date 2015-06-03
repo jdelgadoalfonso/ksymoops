@@ -336,7 +336,7 @@ static void Oops_decode_one(SYMBOL_SET *ss, const char *line, addr_t eip,
  * Strange as it seems, this is actually architecture independent, nothing in
  * this proc cares who created the Code: line.
  */
-static int Oops_code_values(const unsigned char* code_text, unsigned char *code,
+static int Oops_code_values(const char* code_text, char *code,
 			    int *adjust, const OPTIONS *options)
 {
     int byte = 0, byte_prev, len, ret = 1;
@@ -2235,7 +2235,7 @@ static void Oops_decode_part(const char* code, int code_size,
 }
 
 /* Decode the Oops Code: via objdump. */
-static void Oops_decode(const unsigned char* code_text, addr_t eip,
+static void Oops_decode(const char* code_text, addr_t eip,
 			SYMBOL_SET *ss, char ***string, int string_max,
 			const bfd *ibfd, OPTIONS *options)
 {

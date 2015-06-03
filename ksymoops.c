@@ -261,10 +261,10 @@ static void spec_or_default(int spec, int *some_spec) {
  * An address is a string of at least 4 hex digits delimited by white space or
  * punctuation marks, possibly prefixed by 0x or 0X.
  */
-static void adhoc_addresses(struct options *options, const unsigned char *string)
+static void adhoc_addresses(struct options *options, const char *string)
 {
     int count, start;
-    const unsigned char *p = string, *p1;
+    const char *p = string, *p1;
     char *address;
     while (*p) {
 	while (*p && !isxdigit(*p))
